@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor-principal{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y:  auto;
+    perspective: 200px;
+} 
+
+[class*="paralax-contenedor"]{
+    height: 100vh;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.paralax-contenedor__1{
+     /* background-color: aqua; */ 
+}
+
+.paralax-contenedor__2 {
+    background-color: yellowgreen
+}
+
+.layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer__bg{
+    background-image: url(/Img/Fondo.jpg);
+    transform: translateZ(-600px) scale(4);
+    z-index: 0;
+}
+
+.layer__1{
+    background-image: url(/Img/Izquierda\ fondo.png);
+    transform: translateZ(-400px) scale(3);
+    z-index: 1;
+}
+
+.layer__2{
+    background-image: url(/Img/Derecha\ fondo.png);
+    transform: translateZ(-250px) scale(2.3);
+    z-index: 2;
+}
+
+.layer__3{
+    background-image: url(/Img/Izquierda.png);
+    transform: translateZ(-200px) scale(2);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layer__4{
+    background-image: url(/Img/Derecha.png);
+    transform: translateZ(-150px) scale(1.75);
+    z-index: 4;
+}
+
+.layer__3 h1{
+    font-size:10rem;
+}
+
+.paralax-contenedor__2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.paralax-contenedor__2 h1{
+    font-size: 3rem;
+}
